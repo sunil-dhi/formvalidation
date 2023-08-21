@@ -39,6 +39,7 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
+///username
 
     if(usernameValue === '') {
         setError(username, 'Username is required');
@@ -46,6 +47,7 @@ const validateInputs = () => {
         setSuccess(username);
     }
 
+//email
     if(emailValue === '') {
         setError(email, 'Email is required');
     } else if (!isValidEmail(emailValue)) {
@@ -54,6 +56,7 @@ const validateInputs = () => {
         setSuccess(email);
     }
 
+//password
     if(passwordValue === '') {
         setError(password, 'Password is required');
     } else if (passwordValue.length < 8 ) {
@@ -61,7 +64,8 @@ const validateInputs = () => {
     } else {
         setSuccess(password);
     }
-
+    
+//confirm password
     if(password2Value === '') {
         setError(password2, 'Please confirm your password');
     } else if (password2Value !== passwordValue) {
